@@ -1,0 +1,9 @@
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "libmurmur3",
+    srcs = ["src/MurmurHash3.cpp"],
+    hdrs = ["src/MurmurHash3.h"],
+    copts = ["-Wno-implicit-fallthrough"],
+    licenses = ["unencumbered"],  # MurmurHash is explicity public-domain
+)
