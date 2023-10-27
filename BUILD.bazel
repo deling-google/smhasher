@@ -4,6 +4,7 @@ cc_library(
     name = "libmurmur3",
     srcs = ["src/MurmurHash3.cpp"],
     hdrs = ["src/MurmurHash3.h"],
-    copts = ["-Wno-implicit-fallthrough"],
+    # copts = ["-Wno-implicit-fallthrough"],
+    copts = ["/wd26819"],  # https://learn.microsoft.com/en-us/cpp/code-quality/c26819
     licenses = ["unencumbered"],  # MurmurHash is explicity public-domain
 )
